@@ -14,3 +14,5 @@ export default function BoardWriteUI(props) {
     </div>
   );
 }
+
+export const apple = 3;

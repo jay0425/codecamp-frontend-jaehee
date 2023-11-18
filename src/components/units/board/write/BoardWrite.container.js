@@ -1,7 +1,13 @@
 import { useMutation } from '@apollo/client';
 import { useState } from 'react';
-import BoardWriteUI from './BoardWrite.presenter';
-import { 나의그래프큐엘셋팅 } from './BoardWrite.queries';
+import { 나의그래프큐엘셋팅 } from './BoardWrite.queries'; // export는 골라서 가져오기 가능
+import BoardWriteUI from './BoardWrite.presenter'; // export deault로 한개만 가져오기
+// import asdf from './BoardWrite.presenter'; // export deault로 이름 바꿔서 가져오기
+// import asdf, { apple } from './BoardWrite.presenter'; // export deault와 export 함께 가져오기
+
+// import * as S from './BoardWrite.styles'; // export 한방에 다 가져오기
+// S.BlueButton; // export 한방에 다 가져오기
+// S.RedInput; // export 한방에 다 가져오기
 
 export default function BoardWrite() {
   const [writer, setWriter] = useState('');
