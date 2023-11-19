@@ -3,7 +3,7 @@ import { useMutation, gql } from '@apollo/client';
 const CREATE_PRODUCT = gql`
   mutation createProduct($seller: String, $createProductInput: CreateProductInput!) {
     # 변수의 타입 적는 곳
-    createProduct(seller: $seller, createProduct: $createProductInput) {
+    createProduct(seller: $seller, createProductInput: $createProductInput) {
       # 실제 우리가 전달할 변수 적는 곳
       _id
       number
@@ -18,11 +18,11 @@ export default function GraphqlMutationPage() {
   const onClickSubmit = async () => {
     const result = await createProduct({
       variables: {
-        seller: '바나나',
+        seller: '희재',
         createProductInput: {
-          name: '원피스',
-          detail: '정말 예쁜 원피스',
-          price: 300000,
+          name: '마우스',
+          detail: '정말 좋은 마우스',
+          price: 3000,
         },
       },
     });
