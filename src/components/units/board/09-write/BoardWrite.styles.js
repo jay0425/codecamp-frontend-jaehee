@@ -5,5 +5,6 @@ export const RedInput = styled.input`
 `;
 
 export const BlueButton = styled.button`
-  background-color: ${(props) => (props.isActive === true ? 'yellow' : '')};
+  // background-color: ${(props) => (props.isActive === true ? 'yellow' : '')};
+  background-color: blue;
 `;
