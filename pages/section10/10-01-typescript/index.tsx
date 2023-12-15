@@ -8,7 +8,7 @@ export default function TypescriptPage() {
   bbb = 10;
 
   // 타입명시가 필요한 상황
-  let ccc: number | string = 1000;
+  let ccc: number | string = 1000; 
   ccc = '1000원';
 
   // 숫자타입
@@ -44,16 +44,16 @@ export default function TypescriptPage() {
   profile.age = '8살';
   profile.hobby = '수영'; // profile에는 hobby라는것이 없다.
 
-  // 함수타입
+  // 함수타입 ******** 중요!!
   function add(num1: number, num2: number, unit: string): string{
     return num1 + num2 + unit
   }
-  const result = add(1000,2000,"원") // 결과에 리턴타입도 예측가능
+  const result = add(1000,2000,"원") // 결과의 리턴타입도 예측가능
 
   function add2 = (num1: number, num2: number, unit: string): string =>{
     return num1 + num2 + unit
   }
-  const result2 = add(1000,2000,"원") // 결과에 리턴타입도 예측가능
+  const result2 = add(1000,2000,"원") // 결과의 리턴타입도 예측가능
 
 
   // any 타입 <= 가급적 자제하는 것이 좋다.
