@@ -11,6 +11,11 @@ import { IBoardWriteProps, IMyvariables } from './BoardWrite.types';
 // S.BlueButton; // export 한방에 다 가져오기
 // S.RedInput; // export 한방에 다 가져오기
 
+// interface IBoardWriteProps {
+//   isEdit: boolean;
+//   data?: any;
+// }
+
 export default function BoardWrite(props: IBoardWriteProps) {
   const router = useRouter();
 
@@ -41,6 +46,13 @@ export default function BoardWrite(props: IBoardWriteProps) {
   };
 
   const onClickUpdate = async () => {
+    // interface IMyvariables {
+    //   number: number;
+    //   writer?: string;
+    //   title?: string;
+    //   contents?: string;
+    // }
+
     const myvariables: IMyvariables = {
       number: Number(router.query.number),
     };

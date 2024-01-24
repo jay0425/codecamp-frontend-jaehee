@@ -8,7 +8,7 @@ export default function TypescriptPage() {
   bbb = 10;
 
   // 타입명시가 필요한 상황
-  let ccc: number | string = 1000; 
+  let ccc: number | string = 1000; // number 또는 string 
   ccc = '1000원';
 
   // 숫자타입
@@ -21,8 +21,8 @@ export default function TypescriptPage() {
   eee = 'false'; // true <- 생긴건 false인데 실제 값은 true로 인식된다! 이런것들을 막기 위해 타입스크립트를 사용해줘야 한다.
 
   // 배열타입
-  let fff: number[] = [1, 2, 3, 4, 5, '안녕하세요']; // number인데 배열이다.
-  let ggg: string = ['철수', '영희', '훈이', 10];
+  let fff: number[] = [1, 2, 3, 4, 5, '안녕하세요']; // number인데 배열이다. 따라서 '안녕하세요'는 못들어간다.
+  let ggg: string[] = ['철수', '영희', '훈이', 10]; // string[] 타입이므로 10은 못들어간다.
   let hhh: (string | number)[] = ['철수', '영희', '훈이', 10]; // 타입을 추론해서 어떤 타입을 사용하는지 알아보기
 
   // 객체타입

@@ -14,7 +14,7 @@ type aaa = Partial<IProfile>;
 type bbb = Required<IProfile>;
 
 // 3. Pick 타입
-// IProfile에서 name과 age만 '고르기'
+// IProfile에서 name 또는 age만 '고르기'
 type ccc = Pick<IProfile, 'name' | 'age'>;
 
 // 4. Omit 타입
@@ -33,9 +33,9 @@ type fff = Record<eee, IProfile>; // Record 타입 <키, 벨류>
 type ggg = keyof IProfile; // "name" | "age" | "school" | "hobby"
 let myprofile: ggg = 'hobby';
 
-// 7. type vs interface 차이  => interface는 선언병합 가능
+// 7. type vs interface 차이  => interface는 선언병합 가능. type은 안된다.
 export interface IProfile {
-  candy: number; // 선언병합으로 추가됨.
+  candy: number; // 선언병합으로 candy가 추가됨.
 }
 
 // 8. 배운거 응용
